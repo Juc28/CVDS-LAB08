@@ -109,9 +109,10 @@ Creamos las siguientes clases
 ***ConfigurationService.java***
 
 ***ConfigurationRepository.java***
+
 Configuramos la conexión con la base de datos en el archivo ***application.properties*** de la siguiente forma 
-emailid=sunny@domain.com
 ```
+emailid=sunny@domain.com
 spring.jpa.hibernate.ddl-auto=update
 spring.datasource.url=jdbc:mysql://localhost:3306/sys?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
 spring.datasource.username=root

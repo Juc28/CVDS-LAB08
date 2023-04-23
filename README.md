@@ -96,6 +96,31 @@ obtenga de la base de datos el valor del premio:100
       - En la columna PROPIEDAD colocar el valor: “Premio”
       - En la columna VALOR colocar el valor: “100”.
 - Crear la funcionalidad que obtenga ese valor de base de datos una vez se ingrese al juego (presión del botón iniciar).
+
+La conexión a la base de datos se establece a través de Docker usando el comando : 
+```
+docker run -p 3306:3306 --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:latest 
+```
+Creamos clases para las unidades de configuración, se ubican en la base de datos (Repository) y archivos de propiedades para conectarse a la base de datos.
+Creamos las siguientes clases
+
+***Configuration.java***
+
+***ConfigurationService.java***
+
+***ConfigurationRepository.java***
+Configuramos la conexión con la base de datos en el archivo ***application.properties*** de la siguiente forma 
+emailid=sunny@domain.com
+```
+spring.jpa.hibernate.ddl-auto=update
+spring.datasource.url=jdbc:mysql://localhost:3306/sys?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+spring.datasource.username=root
+spring.datasource.password=my-secret-pw
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+logging.level.org.hibernate.SQL=DEBUG
+logging.level.org.hibernate.type.descriptor.sql.BasicBinder=TRACE
+spring.jpa.hibernate.naming.physical-strategy=org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+```
 ### __Autores__
 
 * Erika Juliana Castro Romero [Juc28](https://github.com/Juc28)

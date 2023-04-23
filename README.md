@@ -10,7 +10,7 @@
   
 Para esto descargamos el proyecto del [tutorial](https://www.logicbig.com/tutorials/spring-framework/spring-boot/boot-primefaces-integration.html#google_vignette) y con el siguiente comando ejecutamos y luego en el navegador lo abrimos de la siguiente forma 
 ```
-   mvn spring-boot:run
+mvn spring-boot:run
 ```
 ```
 localhost:8080/index.xhtml 
@@ -66,7 +66,7 @@ Para desplegar el juego de GuessBean del laboratorio 5 nos traemos los archivos 
 ```
 Con el siguiente comando ejecutamos y luego en el navegador lo abrimos de la siguiente forma 
 ```
-   mvn spring-boot:run
+mvn spring-boot:run
 ```
 ```
 localhost:8080/guess.xhtml 
@@ -80,7 +80,7 @@ el jugador podrá jugar.
 Para esto debemos crear una clase llamada ***UserBean*** para poder tener el nombre de la persona que va jugar y luego se crea un archivo xhtml que este caso lo llamamos ***usuario.xhtml***.
 Y luego Con el siguiente comando ejecutamos y luego en el navegador lo abrimos de la siguiente forma. 
 ```
-   mvn spring-boot:run
+mvn spring-boot:run
 ```
 ```
 localhost:8080/usuario.xhtml 
